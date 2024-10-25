@@ -19,7 +19,7 @@ def task_2():
         count_details = len([ps for ps in part_supplies if ps.supplier_id == s.supplier_id])
         
         if count_details > 0:
-            avg_quantity = total_quantity / count_details
+            avg_quantity = round(total_quantity / count_details)
             res_2_unsorted.append((s.name, avg_quantity))
 
     return sorted(res_2_unsorted, key=itemgetter(1), reverse=True)
